@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Flexible Scheduling Icon - Clock with arrows -->
+  <g fill="none" stroke="#3D4F4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="24" fill="#F18A2B" fill-opacity="0.15"/>
+    <polyline points="32,16 32,32 44,38"/>
+    <path d="M56 12l-8 8 8 8" stroke="#F18A2B" stroke-width="2"/>
+    <path d="M8 44l8-8-8-8" stroke="#F18A2B" stroke-width="2"/>
+  </g>
+</svg>

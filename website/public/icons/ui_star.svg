@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Star/Rating Icon -->
+  <g fill="none" stroke="#3D4F4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="32,6 39,24 58,26 44,40 48,58 32,50 16,58 20,40 6,26 25,24" fill="#F18A2B" fill-opacity="0.2"/>
+  </g>
+</svg>

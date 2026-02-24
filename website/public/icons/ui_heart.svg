@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Heart/Favourite Icon -->
+  <g fill="none" stroke="#3D4F4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 56L10 34c-6-6-6-16 0-22 6-6 14-6 20 0l2 2 2-2c6-6 14-6 20 0 6 6 6 16 0 22L32 56z" fill="#F18A2B" fill-opacity="0.2"/>
+  </g>
+</svg>

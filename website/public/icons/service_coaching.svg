@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Coaching Icon - Two speech bubbles / conversation -->
+  <g fill="none" stroke="#D4A03D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 12h28c2 0 4 2 4 4v16c0 2-2 4-4 4H20l-8 8v-8H8c-2 0-4-2-4-4V16c0-2 2-4 4-4z" fill="#D4A03D" fill-opacity="0.15"/>
+    <path d="M44 24h12c2 0 4 2 4 4v16c0 2-2 4-4 4h-4v8l-8-8H28c-2 0-4-2-4-4v-4"/>
+  </g>
+</svg>

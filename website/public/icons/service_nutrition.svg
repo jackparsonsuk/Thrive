@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Nutrition Icon - Apple with leaf -->
+  <g fill="none" stroke="#2A9D8F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 14c0-6 4-10 10-10" stroke="#2A9D8F"/>
+    <path d="M32 14c-12 0-20 10-20 24c0 14 8 22 20 22s20-8 20-22c0-14-8-24-20-24z" fill="#2A9D8F" fill-opacity="0.15"/>
+    <path d="M32 14c-12 0-20 10-20 24c0 14 8 22 20 22s20-8 20-22c0-14-8-24-20-24z"/>
+    <path d="M28 8c4 2 6 6 4 10" stroke="#2A9D8F"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Outdoors Icon - Mountain with sun -->
+  <g fill="none" stroke="#7D9B8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="48" cy="16" r="8" fill="#7D9B8C" fill-opacity="0.15"/>
+    <path d="M4 56L24 24l12 16 8-8 16 24H4z" fill="#7D9B8C" fill-opacity="0.15"/>
+    <path d="M4 56L24 24l12 16 8-8 16 24H4z"/>
+  </g>
+</svg>

@@ -1,0 +1,201 @@
+
+
+
+
+Brand Guidelines
+
+Building a community where everyone can thrive
+
+Version 1.0  |  February 2025
+Introduction
+Thrive Collective is an umbrella brand designed to house multiple services focused on helping people make better life choices and supporting their personal wellness journey. As the brand grows, each service will follow the naming convention Thrive Collective [Service Name], creating a family of offerings united by shared values and purpose.
+Our first venture is a personal training facility, grounding the brand in physical fitness and establishing our commitment to creating welcoming, supportive environments. This foundation in fitness reflects our belief that physical wellbeing is often the starting point for broader positive change.
+This document provides guidance on how to use our brand assets consistently across all touchpoints and future services, ensuring a cohesive and recognisable identity as we grow.
+Our brand represents community, collaboration, and inclusivity. We want everyone to feel welcome, whether they are taking their first steps into personal wellness or looking for a more personal, supportive environment in which to thrive.
+
+
+Brand Values
+Our Core Values
+These values underpin everything we do across all Thrive Collective services, from our founding fitness offering to future ventures.
+Community — We believe in the power of people supporting each other. Thrive Collective is built on connection, not competition.
+Collaboration — Working together achieves more. Our approach brings people together to share knowledge, motivation, and success.
+Inclusivity — Everyone is welcome. We create spaces where people of all backgrounds and abilities feel comfortable taking steps towards better wellbeing.
+Accessibility — We remove barriers. Our smaller, more personal environments make positive change achievable for those who feel overlooked or intimidated by mainstream alternatives.
+Our Audience
+While Thrive Collective welcomes everyone, our primary focus is on people who want a more personal, supportive approach to improving their lives. This includes those seeking smaller, more intimate spaces and individuals looking to make sustainable lifestyle improvements rather than chasing trends or quick fixes.
+For our fitness services specifically, we particularly welcome those who feel uncomfortable in traditional gym environments and want a space where they can build confidence alongside physical strength.
+Our messaging should always reflect understanding, encouragement, and genuine support for people at every stage of their journey — whatever that journey may be.
+
+
+Brand Architecture
+Thrive Collective operates as a parent brand with individual services sitting beneath it. This structure allows each service to have its own identity while benefiting from the collective's reputation and values.
+Naming Convention
+All services follow the format Thrive Collective [Service Name]. This maintains brand recognition while clearly identifying the specific offering.
+Examples:
+Thrive Collective Fitness (personal training facility)
+Thrive Collective Nutrition (future service)
+Thrive Collective Coaching (future service)
+Our Foundation: Fitness
+Physical fitness is where Thrive Collective began, and it remains central to our identity. Our personal training facility establishes the template for how all Thrive Collective services should feel: welcoming, personal, professional, and genuinely supportive. The principles we apply to fitness — smaller spaces, individual attention, progress over perfection — will extend to every service we offer.
+
+Logo
+The Thrive Collective logo features a distinctive hexagonal icon containing an interlocking TC lettermark, paired with our wordmark. The 'i' in THRIVE is stylised as a human figure, representing the people at the heart of everything we do.
+Primary Logo Variations
+The logo is available in multiple formats to suit different applications. Always use the appropriate version for your context.
+Full Colour Logo
+The primary logo for most applications. Use on white or light backgrounds.
+
+Landscape Version (Primary)
+
+Stacked Version (Social media, square formats)
+
+Logo Colour Variations
+The logo is available in several colour treatments for different applications and contexts.
+Greyscale Version
+Use when colour printing is unavailable or in contexts requiring a more subdued appearance.
+
+Greyscale Landscape
+Monogram (Icon Only)
+The TC hexagon can be used independently for watermarks, favicons, app icons, and situations where the full logo would be illegible. Use sparingly and only where brand recognition is already established.
+
+Additional Formats Available
+The complete logo suite includes additional formats for professional applications:
+• CMYK versions for professional print production
+• Pantone versions for colour-matched printing
+• High-resolution TIF files for large format printing
+• Vector formats (AI, EPS, SVG) for unlimited scaling
+• Text-only version (wordmark without hexagon icon)
+Contact the Thrive Collective team for access to the complete logo file package.
+
+Logo Spacing & Clear Space
+Maintaining clear space around the logo ensures it remains legible and impactful. The exclusion zone is defined by the hexagon shape itself — no other elements should intrude into this space.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The faded hexagon pattern in the image above illustrates the minimum clear space requirement. This applies to all logo variations. A full PDF of this is available on the Google Drive.
+Minimum Sizes
+To maintain legibility, do not use the logo smaller than these minimum dimensions:
+• Landscape logo: 120px wide (digital) / 40mm wide (print)
+• Stacked logo: 80px wide (digital) / 25mm wide (print)
+• Monogram only: 32px (digital) / 10mm (print)
+
+
+Colour Palette
+Our colour palette is designed to feel energetic yet approachable. The vibrant orange conveys warmth and motivation, while the charcoal provides grounding and professionalism.
+Primary Palette
+These colours form the core Thrive Collective identity and should be used consistently across all services.
+
+
+Secondary Palette for Sub-Brands
+These colours complement the primary palette and can be used to give sub-brands their own identity while remaining part of the Thrive Collective family.
+
+Using Secondary Colours
+Primary palette always leads — The Thrive Collective logo always appears in its original orange/charcoal/white form.
+One secondary colour per sub-brand — Each service should adopt one secondary colour as its identifier.
+Charcoal remains constant — Thrive Charcoal should be used for text and backgrounds across all sub-brands.
+Orange stays primary — Thrive Orange can still appear in sub-brand materials alongside the secondary colour.
+
+Typography
+Montserrat is our primary typeface. It is clean, modern, and highly legible across digital and print applications. As a Google Font, it is freely available and ensures consistency across platforms.
+Type Hierarchy
+
+Fallback font: If Montserrat is unavailable, use Arial or Helvetica as system alternatives.
+
+
+Tone of Voice
+Our voice should feel like a supportive friend who genuinely wants to help. We are encouraging without being pushy, knowledgeable without being condescending.
+Voice Characteristics
+Motivational — We inspire action through encouragement, not guilt or pressure. Celebrate small wins and progress over perfection.
+Accessible — We use plain language that everyone can understand. Avoid jargon and explain concepts simply.
+Friendly — We speak like a trusted friend. Warm, approachable, and genuine in our communications.
+Professional — We are experts who take what we do seriously. Our friendly tone never compromises our credibility.
+Welcoming — We actively work to make people feel they belong, regardless of their starting point.
+Writing Examples
+
+
+Imagery Style
+Photography and imagery should reflect our values of inclusivity, community, and authenticity. We show real people in real moments, not polished perfection.
+Image Guidelines
+Diversity — Show people of different ages, body types, abilities, and backgrounds.
+Authenticity — Choose natural, candid moments over staged poses.
+Warmth — Favour warm lighting and inviting environments.
+Connection — Show people together — trainers with clients, groups supporting each other.
+Progress over perfection — Show people at various stages of their journey.
+Fitness-Specific Imagery
+For our personal training facility, focus on the experience and the feeling rather than purely physical outcomes. Show the supportive, personal nature of our training environment.
+Emphasise the smaller, more intimate space and one-to-one or small group interactions that differentiate us from large commercial gyms.
+Image Don'ts
+• Avoid overly filtered or heavily retouched images
+• Avoid imagery that focuses solely on body parts or objectifies people
+• Avoid aggressive, competitive, or intimidating visuals
+• Avoid stock photography that looks generic or inauthentic
+
+
+Icon Library
+A comprehensive set of icons is available for use across websites, apps, marketing materials, and printed documents. All icons use the brand colour palette.
+Service Icons
+
+Value Icons
+
+Feature Icons
+
+Icon Usage
+• Minimum size: 24px to maintain legibility
+• Clear space: 25% of icon size around each icon
+• Colours: Thrive Charcoal with Thrive Orange accents
+• Available in SVG format for scalability
+
+Partnerships & Co-Branding
+Thrive Collective values collaboration with like-minded organisations, particularly charities and community groups that share our values.
+Partnership Principles
+Aligned values — We partner with organisations that share our commitment to community and inclusivity.
+Mutual benefit — Partnerships should benefit both parties and the communities we serve together.
+Brand integrity — Both brands should remain distinct and recognisable.
+Charitable focus — We actively seek opportunities to support charitable causes.
+Co-Branding Guidelines
+Logo Placement
+• Equal prominence — partner logos should appear at similar sizes
+• Clear separation — maintain adequate space between logos
+• Consistent positioning — logos should align horizontally or vertically
+• Respect partner guidelines — always follow partner brand guidelines
+Visual Dividers
+When placing logos side by side, use a subtle visual divider: a thin vertical line, the word 'with' or 'supporting' in small text, or adequate white space.
+
+Case Study: Purple Heart Runners
+Thrive Collective has an extremely close partnership with Purple Heart Runners, a charitable running group that raises money for worthy causes.
+About Purple Heart Runners
+Purple Heart Runners brings together people of all abilities to participate in running events while raising money for charity. Their distinctive purple heart symbolises the love for running and community — values that align perfectly with Thrive Collective's focus on inclusive fitness.
+Co-Branding Approach
+Colour integration — The Purple Heart Runners purple (#6B3FA0) may appear as an accent colour alongside our orange.
+Logo placement — Both logos appear at equal prominence, typically side by side.
+Heart motif — The purple heart symbol may be used as a supporting graphic element.
+Messaging — Co-branded communications emphasise shared values: community, accessibility, fitness for everyone.
+Combined Colour Palette Example
+
+
+Brand Do's and Don'ts
+Logo Usage
+
+Brand Communication
+
+
+Questions & Assets
+For brand assets, logo files, icon library, or questions about applying these guidelines, please contact the Thrive Collective team on thrivecollectiveexeter@gmail.com.
+As new services launch under the Thrive Collective umbrella, supplementary guidance may be issued to address service-specific applications while maintaining brand consistency.
+Remember: consistency builds recognition. When in doubt, refer back to these guidelines or ask before proceeding.
+
+Building a community where everyone can thrive

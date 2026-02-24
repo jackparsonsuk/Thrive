@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Personal Training Icon - Trainer with client -->
+  <g fill="none" stroke="#3D4F4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Trainer -->
+    <circle cx="20" cy="16" r="8" fill="#F18A2B" fill-opacity="0.3" stroke="#F18A2B"/>
+    <path d="M8 48c0-8 5-14 12-14s12 6 12 14" stroke="#F18A2B"/>
+    <!-- Client -->
+    <circle cx="46" cy="20" r="6" fill="#3D4F4F" fill-opacity="0.1"/>
+    <path d="M36 48c0-6 4-12 10-12s10 6 10 12"/>
+    <!-- Connection -->
+    <path d="M28 24l8 4" stroke="#F18A2B" stroke-width="2" stroke-dasharray="2,2"/>
+  </g>
+</svg>

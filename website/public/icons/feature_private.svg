@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Private Space Icon - Intimate room/shield -->
+  <g fill="none" stroke="#3D4F4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 4L8 16v20c0 16 24 24 24 24s24-8 24-24V16L32 4z" fill="#F18A2B" fill-opacity="0.15"/>
+    <circle cx="32" cy="28" r="8" fill="#F18A2B" fill-opacity="0.3"/>
+    <path d="M24 48c0-6 4-10 8-10s8 4 8 10"/>
+  </g>
+</svg>

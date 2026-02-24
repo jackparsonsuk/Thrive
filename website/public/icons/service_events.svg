@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Community Events Icon - Calendar with people -->
+  <g fill="none" stroke="#E07A5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="8" y="12" width="48" height="44" rx="4" fill="#E07A5F" fill-opacity="0.15"/>
+    <line x1="8" y1="24" x2="56" y2="24"/>
+    <line x1="20" y1="8" x2="20" y2="16"/>
+    <line x1="44" y1="8" x2="44" y2="16"/>
+    <circle cx="24" cy="40" r="6"/>
+    <circle cx="40" cy="40" r="6"/>
+    <circle cx="32" cy="36" r="6" fill="#E07A5F" fill-opacity="0.3"/>
+  </g>
+</svg>

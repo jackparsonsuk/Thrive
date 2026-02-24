@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Mindfulness Icon - Person meditating -->
+  <g fill="none" stroke="#8E5572" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="14" r="8" fill="#8E5572" fill-opacity="0.15"/>
+    <path d="M16 56c0-8 4-16 16-16s16 8 16 16"/>
+    <path d="M20 36c-8 4-12 8-16 8"/>
+    <path d="M44 36c8 4 12 8 16 8"/>
+    <path d="M32 26v12"/>
+  </g>
+</svg>
