@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { useMobile } from '../hooks/useMobile';
 import SEO from '../components/SEO';
 
@@ -141,13 +142,13 @@ const MeetPTsPage = () => {
                                     {trainer.bio}
                                 </p>
 
-                                <button className="btn-outline" style={{
+                                <Link to="/contact" className="btn-outline" style={{
                                     width: '100%',
                                     borderColor: 'rgba(255, 255, 255, 0.1)',
                                     color: 'var(--text-secondary)'
                                 }}>
-                                    Book Session
-                                </button>
+                                    Contact
+                                </Link>
                             </div>
                         </motion.div>
                     ))}

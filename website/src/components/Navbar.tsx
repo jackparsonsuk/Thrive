@@ -85,7 +85,7 @@ const Navbar = () => {
 
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    style={{ background: 'transparent', color: 'white', display: 'none' }}
+                    style={{ background: 'transparent', border: 'none', color: 'white', display: 'none', cursor: 'pointer', padding: 0 }}
                     className="mobile-menu-btn"
                 >
                     {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -106,7 +106,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         className="glass-panel"
-                        style={{ position: 'absolute', top: '100%', left: 0, right: 0, padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
+                        style={{ position: 'absolute', top: '100%', left: 0, right: 0, padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem', background: scrolled ? 'var(--color-charcoal-darkest)' : 'rgba(30, 20, 15, 0.95)' }}
                     >
                         {links.map((link) => (
                             <Link key={link.name} to={link.path} onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '1.2rem', fontWeight: 600 }}>
