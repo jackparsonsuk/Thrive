@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import SEO from '../components/SEO';
 
 const valuesData = [
     { id: 1, title: 'Community', text: 'Built on connection, not competition.', iconName: 'value_community.svg' },
@@ -20,6 +21,11 @@ const LandingPage = () => {
 
     return (
         <div className="landing-page" ref={containerRef}>
+            <SEO
+                title="Home"
+                description="Thrive Collective offers an elite, supportive wellness and personal training experience in Exeter. Where Everyone Thrives."
+                canonicalUrl="/"
+            />
             {/* Premium Hero Section */}
             <section style={{
                 position: 'relative',

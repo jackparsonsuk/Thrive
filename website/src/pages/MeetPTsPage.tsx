@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 
 const trainers = [
     {
@@ -34,6 +35,11 @@ const trainers = [
 const MeetPTsPage = () => {
     return (
         <div className="section-spacing" style={{ minHeight: '100vh', paddingTop: '150px', background: 'var(--color-charcoal-darkest)' }}>
+            <SEO
+                title="Meet The Team"
+                description="Meet the expert personal trainers and wellness coaches at Thrive Collective in Exeter. Dedicated professionals guiding your journey."
+                canonicalUrl="/meet-the-team"
+            />
 
             {/* Page Header */}
             <div className="container">

@@ -1,6 +1,9 @@
+import SEO from '../components/SEO';
+
 const AboutPage = () => {
     return (
         <div className="container section-padding" style={{ minHeight: '60vh' }}>
+            <SEO title="About Us | Our Story" description="Learn about Thrive Collective's mission to help people make better life choices." canonicalUrl="/about" />
             <h1>Our Story</h1>
             <p style={{ marginTop: '1rem', color: 'var(--color-orange)', fontWeight: 'bold' }}>[Work in Progress]</p>
 

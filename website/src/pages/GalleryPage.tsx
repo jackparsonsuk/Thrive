@@ -1,6 +1,9 @@
+import SEO from '../components/SEO';
+
 const GalleryPage = () => {
     return (
         <div className="container section-padding" style={{ minHeight: '60vh' }}>
+            <SEO title="Facility Gallery" description="Take a look inside Thrive Collective's premium personal training facility." canonicalUrl="/gallery" />
             <h1>Gallery</h1>
             <p style={{ marginTop: '1rem', color: 'var(--color-orange)', fontWeight: 'bold' }}>[Work in Progress]</p>
 

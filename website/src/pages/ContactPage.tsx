@@ -1,6 +1,9 @@
+import SEO from '../components/SEO';
+
 const ContactPage = () => {
     return (
         <div className="container section-padding" style={{ minHeight: '60vh' }}>
+            <SEO title="Contact Us" description="Get in touch with Thrive Collective in Exeter." canonicalUrl="/contact" />
             <h1>Contact Us</h1>
             <p style={{ marginTop: '1rem', color: 'var(--color-orange)', fontWeight: 'bold' }}>[Work in Progress]</p>
 
