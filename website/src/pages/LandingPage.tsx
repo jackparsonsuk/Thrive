@@ -134,7 +134,7 @@ const LandingPage = () => {
                                 marginBottom: '2rem',
                                 padding: '12px'
                             }}>
-                                <img src={`/icons/${val.iconName}`} alt={val.title} style={{ width: '100%', height: '100%', filter: 'invert(52%) sepia(87%) saturate(2150%) hue-rotate(1deg) brightness(103%) contrast(104%)' /* orange tint */ }} />
+                                <img src={`/icons/${val.iconName}`} alt={val.title} style={{ width: '100%', height: '100%' }} />
                             </div>
                             <h3 style={{ fontSize: '1.6rem', marginBottom: '1rem', color: 'var(--color-white)' }}>{val.title}</h3>
                             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.6 }}>{val.text}</p>
@@ -192,7 +192,7 @@ const LandingPage = () => {
                                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                                 marginBottom: '2rem',
                             }}>
-                                <img src="/icons/feature_goals.svg" alt="Heart Icon" style={{ width: '32px', height: '32px', filter: 'invert(52%) sepia(87%) saturate(2150%) hue-rotate(1deg) brightness(103%) contrast(104%)' }} />
+                                <img src="/icons/feature_goals.svg" alt="Heart Icon" style={{ width: '32px', height: '32px' }} />
                             </div>
                             <h3 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Progress Over Perfection</h3>
                             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.7 }}>
