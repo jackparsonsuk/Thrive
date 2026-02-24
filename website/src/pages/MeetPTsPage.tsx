@@ -19,9 +19,9 @@ const trainers = [
     },
     {
         id: 3,
-        name: 'Jordan Lee',
-        role: 'Strength & Conditioning',
-        bio: '[Placeholder] Jordan brings an elite level of athletic conditioning to the everyday person. Focused on measurable progress and empowering you to lift heavier, move faster, and feel unstoppable.',
+        name: 'Mark Flynn',
+        role: 'Personal Trainer',
+        bio: '[Placeholder] Mark brings an elite level of athletic conditioning to the everyday person. Focused on measurable progress and empowering you to lift heavier, move faster, and feel unstoppable.',
         image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800'
     },
     {
