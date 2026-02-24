@@ -2,7 +2,7 @@ import SEO from '../components/SEO';
 
 const BookingPage = () => {
     return (
-        <div className="container section-padding" style={{ minHeight: '60vh' }}>
+        <div className="container" style={{ minHeight: '60vh', paddingTop: '150px', paddingBottom: '100px' }}>
             <SEO title="Book a Session" description="Book your personal training or wellness session at Thrive Collective." canonicalUrl="/booking" />
             <h1>Booking</h1>
             <p style={{ marginTop: '1rem', color: 'var(--color-orange)', fontWeight: 'bold' }}>[Work in Progress]</p>

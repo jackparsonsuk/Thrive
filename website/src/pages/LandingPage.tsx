@@ -168,7 +168,7 @@ const LandingPage = () => {
                             Physical fitness is where Thrive Collective began. Our personal training facility establishes the template for how all services should feel: welcoming, intimate, and genuinely supportive.
                         </p>
                         <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '3rem' }}>
-                            We champion smaller spaces, individual attention, and progress over perfection—principles that will extend to everything we do.
+                            We champion smaller spaces, individual attention, and progress over perfection principles that will extend to everything we do.
                         </p>
 
                         <Link to="/meet-the-team" style={{ display: 'inline-block' }}>
