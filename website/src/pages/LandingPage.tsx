@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 const valuesData = [
@@ -44,10 +45,10 @@ const LandingPage = () => {
                         backgroundPosition: 'center'
                     }}
                 >
-                    {/* Overlay gradient to blend into woody theme */}
+                    {/* Overlay to blend into woody theme */}
                     <div style={{
                         position: 'absolute', inset: 0,
-                        background: 'linear-gradient(to right, rgba(17, 13, 10, 0.95) 0%, rgba(32, 23, 18, 0.7) 50%, rgba(17, 13, 10, 0.9) 100%)'
+                        background: 'rgba(20, 15, 12, 0.85)'
                     }} />
                 </motion.div>
 
@@ -85,7 +86,9 @@ const LandingPage = () => {
                         </p>
 
                         <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-                            <button className="btn-primary">Start Your Journey</button>
+                            <Link to="/booking" style={{ display: 'inline-block' }}>
+                                <button className="btn-primary">Start Your Journey</button>
+                            </Link>
                             <button className="btn-outline">Explore Programs</button>
                         </div>
                     </motion.div>
@@ -164,10 +167,12 @@ const LandingPage = () => {
                             We champion smaller spaces, individual attention, and progress over perfection—principles that will extend to everything we do.
                         </p>
 
-                        <button className="btn-outline" style={{ display: 'inline-flex', gap: '10px' }}>
-                            Meet The Trainers
-                            <img src="/icons/ui_arrow.svg" alt="" style={{ width: '20px', filter: 'brightness(0) invert(1)' }} />
-                        </button>
+                        <Link to="/meet-the-team" style={{ display: 'inline-block' }}>
+                            <button className="btn-outline" style={{ display: 'inline-flex', gap: '10px' }}>
+                                Meet The Trainers
+                                <img src="/icons/ui_arrow.svg" alt="" style={{ width: '20px', filter: 'brightness(0) invert(1)' }} />
+                            </button>
+                        </Link>
                     </motion.div>
 
                     <motion.div
@@ -181,7 +186,7 @@ const LandingPage = () => {
                         <div className="glass-panel" style={{ padding: '4rem 3rem', borderRadius: 'var(--radius-lg)', position: 'relative', zIndex: 1 }}>
                             <div style={{
                                 width: '70px', height: '70px',
-                                background: 'linear-gradient(135deg, rgba(255,90,0,0.2) 0%, rgba(255,90,0,0) 100%)',
+                                background: 'rgba(255, 90, 0, 0.1)',
                                 border: '1px solid rgba(255,90,0,0.3)',
                                 borderRadius: 'var(--radius-md)',
                                 display: 'flex', alignItems: 'center', justifyContent: 'center',
