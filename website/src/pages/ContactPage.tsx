@@ -11,7 +11,14 @@ const ContactPage = () => {
                 <h3 style={{ marginBottom: '1rem' }}>Get in Touch</h3>
                 <p style={{ marginBottom: '2rem' }}>We're here to help you take the first steps towards better wellbeing.</p>
 
-                <p><strong>Email:</strong> <a href="mailto:thrivecollectiveexeter@gmail.com" style={{ color: 'var(--color-orange)' }}>thrivecollectiveexeter@gmail.com</a></p>
+                <p style={{ marginBottom: '1rem' }}><strong>Email:</strong> <a href="mailto:thrivecollectiveexeter@gmail.com" style={{ color: 'var(--color-orange)' }}>thrivecollectiveexeter@gmail.com</a></p>
+                <p><strong>Address:</strong><br />
+                    <span style={{ color: 'var(--text-secondary)' }}>
+                        Unit 39, 39 Marsh Grn Rd W,<br />
+                        Marsh Barton, Exeter<br />
+                        EX2 8PN
+                    </span>
+                </p>
             </div>
         </div>
     );

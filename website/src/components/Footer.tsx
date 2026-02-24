@@ -8,7 +8,11 @@ const Footer = () => {
                 </div>
                 <div>
                     <h4 style={{ marginBottom: '1rem' }}>Contact Us</h4>
-                    <p style={{ color: 'var(--text-muted)' }}>Email: thrivecollectiveexeter@gmail.com</p>
+                    <p style={{ color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Email: thrivecollectiveexeter@gmail.com</p>
+                    <p style={{ color: 'var(--text-muted)' }}>
+                        Unit 39, 39 Marsh Grn Rd W<br />
+                        Marsh Barton, Exeter EX2 8PN
+                    </p>
                 </div>
             </div>
             <div style={{ textAlign: 'center', marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.1)', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
