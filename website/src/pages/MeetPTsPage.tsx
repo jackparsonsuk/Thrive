@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useMobile } from '../hooks/useMobile';
 import SEO from '../components/SEO';
 
 const trainers = [
@@ -33,6 +34,8 @@ const trainers = [
 ];
 
 const MeetPTsPage = () => {
+    const isMobile = useMobile();
+
     return (
         <div style={{ minHeight: '100vh', paddingTop: '150px', paddingBottom: '100px', background: 'var(--color-charcoal-darkest)' }}>
             <SEO
@@ -44,7 +47,7 @@ const MeetPTsPage = () => {
             {/* Page Header */}
             <div className="container" style={{ marginBottom: '6rem', textAlign: 'center' }}>
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     style={{ maxWidth: '800px', margin: '0 auto' }}
@@ -74,7 +77,7 @@ const MeetPTsPage = () => {
                     {trainers.map((trainer, index) => (
                         <motion.div
                             key={trainer.id}
-                            initial={{ opacity: 0, y: 40 }}
+                            initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.8, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}

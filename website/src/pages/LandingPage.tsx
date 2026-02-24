@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useMobile } from '../hooks/useMobile';
 import SEO from '../components/SEO';
 
 const valuesData = [
@@ -12,6 +13,8 @@ const valuesData = [
 
 const LandingPage = () => {
     const containerRef = useRef(null);
+    const isMobile = useMobile();
+
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end start"]
@@ -39,7 +42,8 @@ const LandingPage = () => {
                 {/* Parallax Background */}
                 <motion.div
                     style={{
-                        position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1, y,
+                        position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1,
+                        y: isMobile ? 0 : y,
                         backgroundImage: `url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=2000')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
@@ -54,8 +58,8 @@ const LandingPage = () => {
 
                 <div className="container" style={{ position: 'relative', zIndex: 1, width: '100%' }}>
                     <motion.div
-                        style={{ opacity }}
-                        initial={{ opacity: 0, y: 50 }}
+                        style={{ opacity: isMobile ? 1 : opacity }}
+                        initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                         className="hero-content"
@@ -105,7 +109,7 @@ const LandingPage = () => {
                     {valuesData.map((val, idx) => (
                         <motion.div
                             key={val.id}
-                            initial={{ opacity: 0, y: 40 }}
+                            initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.8, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
@@ -150,7 +154,7 @@ const LandingPage = () => {
             }}>
                 <div className="container" style={{ display: 'flex', flexWrap: 'wrap', gap: '6rem', alignItems: 'center' }}>
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
+                        initial={isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
@@ -176,7 +180,7 @@ const LandingPage = () => {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
+                        initial={isMobile ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
