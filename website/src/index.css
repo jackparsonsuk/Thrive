@@ -44,6 +44,18 @@ html {
   overflow-x: hidden;
 }
 
+::selection {
+  background: var(--color-orange);
+  /* WebKit/Blink Browsers */
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background: var(--color-orange);
+  /* Gecko Browsers */
+  color: var(--color-white);
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-primary);
