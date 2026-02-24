@@ -15,8 +15,8 @@ const SEO = ({
 }: SEOProps) => {
     const siteName = 'Thrive Collective';
     const fullTitle = title ? `${title} | ${siteName}` : `${siteName} - Personal Training & Wellness Exeter`;
-    const defaultDescription = 'Thrive Collective is a personal training facility in Exeter abandoning the intimidating gym floor for a supportive, elite wellness experience.';
-    const siteUrl = 'https://www.thrivecollective.com'; // Replace with actual production URL
+    const defaultDescription = 'Thrive Collective is a personal training facility in Exeter abandoning the intimidating gym floor for a supportive, elite wellness space for every ability.';
+    const siteUrl = 'https://www.thrivecollectiveexeter.co.uk';
     const currentUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
 
     return (
