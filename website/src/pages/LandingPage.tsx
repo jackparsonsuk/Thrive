@@ -93,9 +93,6 @@ const LandingPage = () => {
                             <Link to="/booking" style={{ display: 'inline-block' }}>
                                 <button className="btn-primary">Start Your Journey</button>
                             </Link>
-                            <Link to="/about" style={{ display: 'inline-block' }}>
-                                <button className="btn-outline">Explore Programs</button>
-                            </Link>
                         </div>
                     </motion.div>
                 </div>

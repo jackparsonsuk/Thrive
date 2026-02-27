@@ -1,36 +1,81 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { useMobile } from '../hooks/useMobile';
 import SEO from '../components/SEO';
 
 const trainers = [
     {
         id: 1,
-        name: 'Alex Johnson',
-        role: 'Head Trainer',
-        bio: 'Alex specializes in creating welcoming environments for beginners, focusing on sustainable lifestyle improvements. With over 10 years of experience, Alex ensures every session is not just physically impactful, but genuinely supportive.',
-        image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=800'
+        name: 'Nick Davies',
+        role: 'Co-Founder & Client',
+        bio: `Nick's journey to co-founding Thrive Collective began not with a business idea, but with a single step through a door he wasn't sure was meant for him.\n\nDiagnosed with Myalgic Encephalopathy (ME) in 2007, Nick had spent years believing that fitness simply wasn't something he could access. A Christmas gift of six PT sessions with Tom changed that — and over time, losing 35kg and completing his first half-marathon, he discovered something he hadn't expected: what it feels like to be genuinely supported, encouraged, and welcomed, without judgement.\n\nIt was that experience — of finding the right people — that made Nick want to be part of building something bigger. When discussions started about creating a space that could offer that same feeling to everyone, Nick knew he wanted to help make it happen. Not as a trainer, but as someone who understands exactly what it feels like to walk through the door for the first time, unsure if this world is for you.\n\nThat perspective sits at the heart of everything Thrive Collective is. Alongside his background in business management, teaching, and leadership, Nick brings the lived experience of a client who found his people — and wants everyone else to find theirs too.\n\nSo if you're unsure whether fitness is for you, or simply don't know where to start, feel free to reach out to Nick directly — he's always happy to have an honest, no-pressure conversation.`,
+        specialisms: [],
+        contact: {
+            email: 'thrivecollectiveexeter@gmail.com',
+            instagram: 'wheres_nick_gone',
+            whatsapp: '07812055812',
+        },
+        image: '/images/pts/nick.jpeg'
     },
     {
         id: 2,
-        name: 'Sam Smith',
-        role: 'Mobility Specialist',
-        bio: 'Sam helps you build lasting confidence alongside physical strength, ensuring every movement feels right for your unique body. Specialized in rehabilitation and overcoming physical barriers safely.',
-        image: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&q=80&w=800'
+        name: 'Tom Bottoms',
+        role: 'Co-Founder & Personal Trainer',
+        bio: `Tom was born and raised in Exeter, and has spent his career building something he genuinely believes in: a fitness space where nobody feels left behind.\n\nAs a Level 3 Personal Trainer with specialist qualifications in pre- and post-natal exercise, Tom brings both technical expertise and the personal touch that makes the difference. His track record includes supporting a national swimming champion in earning a scholarship to Stanford and working with competitive motor sports athletes — but his proudest achievements are often the quieter ones: helping a new mum regain her strength, or supporting someone with a long-term health condition take their first steps back into exercise.\n\nTom is passionate about developing fellow trainers too, actively mentoring and championing inclusive approaches to fitness.`,
+        specialisms: [
+            'Pre- and post-natal exercise',
+            'Junior athlete development',
+            'Competitive sport performance',
+            'Community fitness'
+        ],
+        contact: {
+            email: 'thrivecollectiveexeter@gmail.com',
+            instagram: 'tnbpt',
+            whatsapp: '07757777470',
+            googleReviews: 'https://maps.app.goo.gl/F61NqxCPWBHRRrpw8'
+        },
+        image: '/images/pts/tom.jpeg'
     },
     {
         id: 3,
         name: 'Mark Flynn',
-        role: 'Personal Trainer',
-        bio: '[Placeholder] Mark brings an elite level of athletic conditioning to the everyday person. Focused on measurable progress and empowering you to lift heavier, move faster, and feel unstoppable.',
-        image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800'
+        role: 'Co-Founder & Personal Trainer',
+        bio: `Mark’s path to personal training wasn’t a straight line — and that’s exactly what makes him such a powerful presence at Thrive Collective. Having gone on his own significant weight loss journey before qualifying as a PT, Mark knows from the inside what it feels like to want change, to doubt yourself, and to ultimately discover what you’re capable of. That lived experience shapes everything he does.\n\nMark is a passionate advocate for the connection between physical and mental health — and he puts that belief into practice. He runs dedicated groups for both men and women that bring these two elements together, creating safe, supportive spaces where people can be honest about how they’re feeling as well as how they’re moving. He is currently training to become a counsellor, deepening his ability to support clients in a truly holistic way.\n\nFor Mark, Thrive Collective represents the chance to build something he’d always wanted to represent and what the power of good health and wellbeing can achieve — a warm, welcoming environment where physical and mental wellbeing are nurtured together, diversity is celebrated, and no one is ever made to feel like they don’t belong.`,
+        specialisms: [
+            'Mental health and physical wellbeing',
+            'Men’s and women’s group training',
+            'Holistic wellness coaching',
+            'Positive mindset change',
+            'Training for life',
+            'Weight loss supported coaching',
+            'Level 3 Sports massage'
+        ],
+        contact: {
+            email: 'Thrivecollectiveexeter@gmail.com',
+            instagram: 'markflynnfitness',
+            facebook: 'https://www.facebook.com/markflynnfitness',
+            whatsapp: '07477442601'
+        },
+        image: '/images/pts/mark.jpeg'
     },
     {
         id: 4,
-        name: 'Taylor Quinn',
-        role: 'Wellness Coach',
-        bio: '[Placeholder] Focusing on the mind-body connection, Taylor integrates mindfulness, recovery techniques, and holistic nutrition advice into every customized training program.',
-        image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800'
+        name: 'Sarah Pattinson',
+        role: 'Personal Trainer & Adaptive Exercise Specialist',
+        bio: `A Therapy Assistant and Dementia Champion on the Trauma ward at her local hospital, Sarah became more and more passionate about 'getting people moving'. At the same time, she developed a keen love for weightlifting, meeting a trainer who always casually stated, 'When you can't get another rep, do one more rep’. Training became the easiest thing in the world.\n\nBecoming a mum of two presented its challenges, especially after two c-sections, and Sarah had to learn how to move her body again safely after this. Competing firstly at a local, and then at a national Bodybuilding competition with an 18-month-old baby further taught her how incredible the body and the power of the mind could be.\n\nThen perimenopause hit. Like a truck. Vowing not give up on her body or on others, she is currently studying to become a Specialist Perimenopause and Menopause Fitness Coach. Already qualified as a Seated Exercise Instructor to help those that maybe older and look less mobile, Sarah is passionate about helping to support people through these trickier times in life, understanding the importance of movement and strength, and the impact this has on life as we get older.\n\nWherever you are on your journey, whether you are looking to start, realising your training needs to adapt, or if you are older and wanting to become more mobile and regain some independence, we've got you!`,
+        specialisms: [
+            'Seated and adaptive exercise',
+            'Accessible fitness',
+            'Long-term health conditions',
+            'Premenopause/menopause fitness',
+            'Reduced mobility and rehabilitation'
+        ],
+        contact: {
+            email: 'thrivecollectiveexeter@gmail.com',
+            instagram: 'sarahmae_pt',
+            facebook: 'https://www.facebook.com/share/1Kownr2SrZ/?mibextid=wwXlfr',
+            whatsapp: '07794473220'
+        },
+        image: '/images/pts/sarah.jpeg'
     }
 ];
 
@@ -51,7 +96,7 @@ const MeetPTsPage = () => {
                     initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    style={{ maxWidth: '800px', margin: '0 auto' }}
+                    style={{ maxWidth: '900px', margin: '0 auto' }}
                 >
                     <div style={{ display: 'inline-flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem', justifyContent: 'center' }}>
                         <div style={{ width: '40px', height: '2px', background: 'var(--color-orange)' }} />
@@ -61,19 +106,20 @@ const MeetPTsPage = () => {
                     <h1 style={{ fontSize: 'clamp(3rem, 6vw, 5rem)', color: 'var(--color-white)', lineHeight: 1.1, marginBottom: '2rem', letterSpacing: '-0.02em' }}>
                         Our Expert Team.
                     </h1>
-                    <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '600px', margin: '0 auto', fontWeight: 400 }}>
-                        Dedicated professionals here to guide your journey. We prioritize supportive, personal attention to help you thrive.
-                    </p>
+                    <div style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '800px', margin: '0 auto', fontWeight: 400 }}>
+                        <p style={{ marginBottom: '1rem' }}>
+                            We’re a team of experienced, passionate personal trainers who believe that fitness should be accessible to everyone. Between us, we bring a wide range of specialist expertise — and a genuine commitment to helping every single client succeed.
+                        </p>
+                    </div>
                 </motion.div>
             </div>
 
-            {/* Clean Grid Layout */}
+            {/* Clean Vertical Stacked Layout for detailed bios */}
             <div className="container">
                 <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-                    gap: '3rem',
-                    alignItems: 'stretch'
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '4rem'
                 }}>
                     {trainers.map((trainer, index) => (
                         <motion.div
@@ -81,21 +127,21 @@ const MeetPTsPage = () => {
                             initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.8, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
+                            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                             className="glass-panel"
                             style={{
                                 borderRadius: 'var(--radius-lg)',
                                 overflow: 'hidden',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
+                                display: 'grid',
+                                gridTemplateColumns: isMobile ? '1fr' : '350px 1fr',
+                                gap: '0',
                                 position: 'relative'
                             }}
                         >
                             {/* Image Section */}
                             <div style={{
-                                height: '350px',
-                                overflow: 'hidden',
+                                height: isMobile ? '400px' : '100%',
+                                minHeight: '400px',
                                 position: 'relative',
                                 backgroundColor: 'var(--color-charcoal-dark)'
                             }}>
@@ -113,12 +159,11 @@ const MeetPTsPage = () => {
 
                             {/* Content Section */}
                             <div style={{
-                                padding: '2.5rem 2rem',
+                                padding: isMobile ? '2.5rem 1.5rem' : '3.5rem 3rem',
                                 display: 'flex',
-                                flexDirection: 'column',
-                                flexGrow: 1
+                                flexDirection: 'column'
                             }}>
-                                <h2 style={{ fontSize: '2.2rem', marginBottom: '0.2rem', color: 'var(--color-white)' }}>
+                                <h2 style={{ fontSize: '2.5rem', marginBottom: '0.2rem', color: 'var(--color-white)' }}>
                                     {trainer.name}
                                 </h2>
                                 <p style={{
@@ -127,28 +172,72 @@ const MeetPTsPage = () => {
                                     fontSize: '1rem',
                                     textTransform: 'uppercase',
                                     letterSpacing: '2px',
-                                    marginBottom: '1.5rem'
+                                    marginBottom: '2rem'
                                 }}>
                                     {trainer.role}
                                 </p>
 
-                                <p style={{
+                                <div style={{
                                     fontSize: '1.05rem',
                                     color: 'var(--text-secondary)',
                                     lineHeight: 1.7,
                                     marginBottom: '2.5rem',
-                                    flexGrow: 1
                                 }}>
-                                    {trainer.bio}
-                                </p>
+                                    {trainer.bio.split('\n\n').map((paragraph, i) => (
+                                        <p key={i} style={{ marginBottom: '1rem' }}>{paragraph}</p>
+                                    ))}
+                                </div>
 
-                                <Link to="/contact" className="btn-outline" style={{
-                                    width: '100%',
-                                    borderColor: 'rgba(255, 255, 255, 0.1)',
-                                    color: 'var(--text-secondary)'
-                                }}>
-                                    Contact
-                                </Link>
+                                {trainer.specialisms.length > 0 && (
+                                    <div style={{ marginBottom: '2.5rem' }}>
+                                        <h4 style={{ color: 'var(--color-white)', fontSize: '1.1rem', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Specialisms</h4>
+                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                                            {trainer.specialisms.map((spec, i) => (
+                                                <span key={i} style={{
+                                                    background: 'rgba(255, 255, 255, 0.05)',
+                                                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                                                    color: 'var(--text-secondary)',
+                                                    padding: '0.4rem 0.8rem',
+                                                    borderRadius: 'var(--radius-full)',
+                                                    fontSize: '0.9rem'
+                                                }}>
+                                                    {spec}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                <div>
+                                    <h4 style={{ color: 'var(--color-white)', fontSize: '1.1rem', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Contact {trainer.name.split(' ')[0]}</h4>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+                                        {trainer.contact.email && (
+                                            <a href={`mailto:${trainer.contact.email}`} className="btn-outline" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', borderColor: 'rgba(255,255,255,0.1)' }}>
+                                                Email
+                                            </a>
+                                        )}
+                                        {trainer.contact.whatsapp && (
+                                            <a href={`https://wa.me/${trainer.contact.whatsapp.replace(/\s+/g, '')}`} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', borderColor: 'rgba(255,255,255,0.1)' }}>
+                                                WhatsApp
+                                            </a>
+                                        )}
+                                        {trainer.contact.instagram && (
+                                            <a href={`https://instagram.com/${trainer.contact.instagram.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', borderColor: 'rgba(255,255,255,0.1)' }}>
+                                                Instagram
+                                            </a>
+                                        )}
+                                        {trainer.contact.facebook && (
+                                            <a href={trainer.contact.facebook.startsWith('http') ? trainer.contact.facebook : `https://${trainer.contact.facebook}`} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', borderColor: 'rgba(255,255,255,0.1)' }}>
+                                                Facebook
+                                            </a>
+                                        )}
+                                        {trainer.contact.googleReviews && (
+                                            <a href={trainer.contact.googleReviews} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', borderColor: 'rgba(255,255,255,0.1)' }}>
+                                                Google Reviews
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     ))}
