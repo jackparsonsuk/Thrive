@@ -76,6 +76,26 @@ const trainers = [
             whatsapp: '07794473220'
         },
         image: '/images/pts/sarah.jpeg'
+    },
+    {
+        id: 5,
+        name: 'Charlie Reynolds',
+        role: 'Personal Trainer & Wellness Coach',
+        bio: `Charlie understands what it feels like to not feel at home in your own body. Growing up underweight and lacking confidence, he knows first-hand how powerful the right support can be, and that lived experience underpins everything he does.\n\nWith over 10 years of coaching experience, a degree in Physical & Outdoor Education, and Level 3 Personal Training and GP Referral qualifications, Charlie brings a calm, strategic and holistic approach to health and performance.\n\nAs the founder of Cloud9 Wellness, Charlie specialises in long-term behaviour change, helping people build strength, resilience and confidence in a way that fits real life. His coaching goes beyond workouts, considering lifestyle, stress, recovery and mindset to create sustainable results.\n\nHis three-phase process, Lifestyle, Build & Thrive, ensures clients not only achieve progress but maintain it, feeling stronger and more capable year after year.\n\nCharlie is passionate about creating environments, like Thrive, where people can train hard, switch off from outside stress, and feel genuinely supported in their long-term wellbeing.`,
+        specialisms: [
+            'All-round wellness',
+            'Physical and mental health',
+            'Sustainable lifestyle change',
+            'General fitness and conditioning'
+        ],
+        contact: {
+            email: 'Charlie.cloud9pt@gmail.com',
+            instagram: 'charliereynoldswellness',
+            whatsapp: '07889018351',
+            googleReviews: 'https://maps.app.goo.gl/twcokdFeEPp4LVS68',
+            website: 'www.cloud9personaltraining.co.uk'
+        },
+        image: '/images/pts/charlie.jpeg'
     }
 ];
 
@@ -152,7 +172,7 @@ const MeetPTsPage = () => {
                                         position: 'absolute', inset: 0,
                                         backgroundImage: `url('${trainer.image}')`,
                                         backgroundSize: 'cover',
-                                        backgroundPosition: 'center top',
+                                        backgroundPosition: trainer.name === 'Charlie Reynolds' && !isMobile ? 'calc(50% + 50px) top' : 'center top',
                                     }}
                                 />
                             </div>
@@ -234,6 +254,12 @@ const MeetPTsPage = () => {
                                         {trainer.contact.googleReviews && (
                                             <a href={trainer.contact.googleReviews} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', borderColor: 'rgba(255,255,255,0.1)' }}>
                                                 Google Reviews
+                                            </a>
+                                        )}
+                                        {/* @ts-ignore - website is an optional property not typed in the main array type initially but added for trainer id 5 */}
+                                        {(trainer.contact as any).website && (
+                                            <a href={(trainer.contact as any).website.startsWith('http') ? (trainer.contact as any).website : `https://${(trainer.contact as any).website}`} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', borderColor: 'rgba(255,255,255,0.1)' }}>
+                                                Website
                                             </a>
                                         )}
                                     </div>
