@@ -121,7 +121,7 @@ const MeetPTsPage = () => {
                     flexDirection: 'column',
                     gap: '4rem'
                 }}>
-                    {trainers.map((trainer, index) => (
+                    {trainers.map((trainer) => (
                         <motion.div
                             key={trainer.id}
                             initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
