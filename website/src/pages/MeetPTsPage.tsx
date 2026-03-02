@@ -14,13 +14,13 @@ const trainers = [
             instagram: 'wheres_nick_gone',
             whatsapp: '07812055812',
         },
-        image: '/images/pts/nick.jpeg'
+        image: '/images/pts/nick.jpg'
     },
     {
         id: 2,
         name: 'Tom Bottoms',
         role: 'Co-Founder & Personal Trainer',
-        bio: `Tom was born and raised in Exeter, and has spent his career building something he genuinely believes in: a fitness space where nobody feels left behind.\n\nAs a Level 3 Personal Trainer with specialist qualifications in pre- and post-natal exercise, Tom brings both technical expertise and the personal touch that makes the difference. His track record includes supporting a national swimming champion in earning a scholarship to Stanford and working with competitive motor sports athletes — but his proudest achievements are often the quieter ones: helping a new mum regain her strength, or supporting someone with a long-term health condition take their first steps back into exercise.\n\nTom is passionate about developing fellow trainers too, actively mentoring and championing inclusive approaches to fitness.`,
+        bio: `Tom was born and raised in Devon and has made Exeter his home. Over his career in health and fitness, he’s stayed true to his values: To help normal people find enjoyment in movement and health. One of the first fitness classes Tom lead at the start of his career was a conditioning for wellness class aimed at maintaining health for the 65yrs+. It was during these early interactions with the fitness industry that Tom saw how amazingly rewarding it can be to help people move more easily, and learn to have confidence in their bodies abilities. He truly believes that keeping active is one of the most important things a person can do.\n\nAs a Level 3 Personal Trainer, with a BSc in sports performance from University of Bath, Tom has a deep technical understanding of the human body and its mechanisms. This interest in the human body lead to one of Toms specialisms, injury recovery. In more recent years, aiding his clients in the recovery of issues such as knee replacements surgeries, pelvic fractures, broken wrists, broken ankles, and many other serious injuries or surgery recoveries.\n\nSpeak to any of Toms clients and they will tell you the aspect of Toms training that really stands out is the personal connection and understanding. He makes sure that any exercise his clients are doing remains relevant and specific to their needs. A good example of this is how Tom is currently working with multiple mothers who are each at varying stages of the pre and post natal journey. Each session with these mums is specific to their stage of the journey. Then, with the next client through the door, Tom is delivering a sport specific session to some of Exeters most inspiring young athletes. It’s his ability to ensure his clients are really getting what they need that helps his training sessions stand out.\n\nA sign off from Tom “I am always honoured and grateful that people put their trust in me to help them find confidence in fitness. I genuinely love how I get to see each of my amazing unique clients, push themselves to achieve the goals specific to them. Sometimes my biggest triumph of the week is encouraging someone to simply leave the house… if we manage to get some exercise done, then hey we are already winning!”`,
         specialisms: [
             'Pre- and post-natal exercise',
             'Junior athlete development',
@@ -33,7 +33,7 @@ const trainers = [
             whatsapp: '07757777470',
             googleReviews: 'https://maps.app.goo.gl/F61NqxCPWBHRRrpw8'
         },
-        image: '/images/pts/tom.jpeg'
+        image: '/images/pts/tom.jpg'
     },
     {
         id: 3,
@@ -55,7 +55,7 @@ const trainers = [
             facebook: 'https://www.facebook.com/markflynnfitness',
             whatsapp: '07477442601'
         },
-        image: '/images/pts/mark.jpeg'
+        image: '/images/pts/mark.jpg'
     },
     {
         id: 4,
@@ -75,7 +75,7 @@ const trainers = [
             facebook: 'https://www.facebook.com/share/1Kownr2SrZ/?mibextid=wwXlfr',
             whatsapp: '07794473220'
         },
-        image: '/images/pts/sarah.jpeg'
+        image: '/images/pts/sarah.jpg'
     },
     {
         id: 5,
@@ -95,7 +95,7 @@ const trainers = [
             googleReviews: 'https://maps.app.goo.gl/twcokdFeEPp4LVS68',
             website: 'www.cloud9personaltraining.co.uk'
         },
-        image: '/images/pts/charlie.jpeg'
+        image: '/images/pts/charlie.jpg'
     }
 ];
 
