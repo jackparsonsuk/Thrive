@@ -49,8 +49,11 @@ const GalleryPage = () => {
                     <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', color: 'var(--color-white)', textTransform: 'uppercase' }}>
                         Gallery
                     </h1>
-                    <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                    <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '0.5rem' }}>
                         Take a look around. Our space is small by design — intimate, private, and built for the kind of training that actually works.
+                    </p>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--color-orange)', fontWeight: 600, opacity: 0.8 }}>
+                        (Please note: These images are for illustrative purposes while we populate our gallery with real shots of our space!)
                     </p>
                 </motion.div>
             </section>
