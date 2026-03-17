@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useMobile } from '../hooks/useMobile';
 import SEO from '../components/SEO';
 
@@ -101,6 +102,13 @@ const trainers = [
 
 const MeetPTsPage = () => {
     const isMobile = useMobile();
+    const [expandedIds, setExpandedIds] = useState<number[]>([]);
+
+    const toggleExpand = (id: number) => {
+        setExpandedIds(prev =>
+            prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
+        );
+    };
 
     return (
         <div style={{ minHeight: '100vh', paddingTop: '150px', paddingBottom: '100px', background: 'var(--color-charcoal-darkest)' }}>
@@ -201,11 +209,55 @@ const MeetPTsPage = () => {
                                     fontSize: '1.05rem',
                                     color: 'var(--text-secondary)',
                                     lineHeight: 1.7,
-                                    marginBottom: '2.5rem',
+                                    marginBottom: '1.5rem',
                                 }}>
-                                    {trainer.bio.split('\n\n').map((paragraph, i) => (
+                                    {trainer.bio.split('\n\n').slice(0, 1).map((paragraph, i) => (
                                         <p key={i} style={{ marginBottom: '1rem' }}>{paragraph}</p>
                                     ))}
+
+                                    <AnimatePresence>
+                                        {expandedIds.includes(trainer.id) && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: 'auto', opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                                                style={{ overflow: 'hidden' }}
+                                            >
+                                                {trainer.bio.split('\n\n').slice(1).map((paragraph, i) => (
+                                                    <p key={i + 1} style={{ marginBottom: '1rem' }}>{paragraph}</p>
+                                                ))}
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+
+                                    {trainer.bio.split('\n\n').length > 1 && (
+                                        <button
+                                            onClick={() => toggleExpand(trainer.id)}
+                                            style={{
+                                                background: 'none',
+                                                border: 'none',
+                                                color: 'var(--color-orange)',
+                                                fontWeight: 600,
+                                                cursor: 'pointer',
+                                                padding: 0,
+                                                fontSize: '0.95rem',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '0.5rem',
+                                                marginTop: '0.5rem'
+                                            }}
+                                        >
+                                            {expandedIds.includes(trainer.id) ? 'Read Less' : 'Read More'}
+                                            <motion.span
+                                                animate={{ rotate: expandedIds.includes(trainer.id) ? 180 : 0 }}
+                                                transition={{ duration: 0.3 }}
+                                                style={{ display: 'inline-block' }}
+                                            >
+                                                ↓
+                                            </motion.span>
+                                        </button>
+                                    )}
                                 </div>
 
                                 {trainer.specialisms.length > 0 && (
