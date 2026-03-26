@@ -39,10 +39,11 @@ const Footer = () => {
                     </p>
                     <p style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'flex-start', gap: '0.5rem', marginTop: '1rem' }}>
                         <img src="/icons/ui_location.svg" alt="" style={{ width: '16px', filter: 'brightness(0) invert(0.7)', marginTop: '4px' }} />
-                        <span>
+                        <a href="https://maps.app.goo.gl/uQ5U21TeqaAWSCLE7" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', textDecoration: 'none', transition: 'color var(--transition-fast)' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--color-orange)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-muted)'}>
+                            <strong style={{ color: 'var(--color-white)' }}>Thrive Collective Exeter</strong><br />
                             Unit 39, 39 Marsh Grn Rd W<br />
                             Marsh Barton, Exeter EX2 8PN
-                        </span>
+                        </a>
                     </p>
                 </div>
             </div>

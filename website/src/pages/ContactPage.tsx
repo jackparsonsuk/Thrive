@@ -13,11 +13,12 @@ const ContactPage = () => {
 
                 <p style={{ marginBottom: '1rem' }}><strong>Email:</strong> <a href="mailto:thrivecollectiveexeter@gmail.com" style={{ color: 'var(--color-orange)' }}>thrivecollectiveexeter@gmail.com</a></p>
                 <p><strong>Address:</strong><br />
-                    <span style={{ color: 'var(--text-secondary)' }}>
+                    <a href="https://maps.app.goo.gl/uQ5U21TeqaAWSCLE7" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color var(--transition-fast)' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--color-orange)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>
+                        <strong>Thrive Collective Exeter</strong><br />
                         Unit 39, 39 Marsh Grn Rd W,<br />
                         Marsh Barton, Exeter<br />
                         EX2 8PN
-                    </span>
+                    </a>
                 </p>
             </div>
         </div>
