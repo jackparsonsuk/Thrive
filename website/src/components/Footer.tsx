@@ -46,8 +46,9 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-            <div style={{ textAlign: 'center', marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
-                &copy; {new Date().getFullYear()} Thrive Collective. All rights reserved.
+            <div style={{ textAlign: 'center', marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--text-muted)', fontSize: '0.875rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <div>&copy; {new Date().getFullYear()} Thrive Collective. All rights reserved.</div>
+                <div>Made by Jack - <a href="https://jackweb.design" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline', transition: 'color var(--transition-fast)' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--color-orange)'} onMouseOut={(e) => e.currentTarget.style.color = 'inherit'}>jackweb.design</a></div>
             </div>
         </footer>
     );
