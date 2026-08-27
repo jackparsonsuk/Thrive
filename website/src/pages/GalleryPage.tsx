@@ -11,12 +11,16 @@ const imageModules = import.meta.glob<string>(
     { eager: true, query: '?url', import: 'default' }
 );
 
+// Proper nouns keep their capitals wherever they land in a filename.
+const properNouns = /\b(thrive|collective|exeter)\b/gi;
+
 // Turn "01_squat-rack.jpg" into "Squat rack" for the alt text.
 const toAlt = (path: string) => {
     const name = path.split('/').pop()?.replace(/\.[^.]+$/, '') ?? '';
     const words = name.replace(/^[\d\s_-]+/, '').replace(/[_-]+/g, ' ').trim();
     if (!words) return 'Thrive Collective, Exeter';
-    return words.charAt(0).toUpperCase() + words.slice(1);
+    const sentence = words.charAt(0).toUpperCase() + words.slice(1);
+    return sentence.replace(properNouns, (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
 };
 
 const photos = Object.keys(imageModules)
