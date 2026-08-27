@@ -1,39 +1,75 @@
 import SEO from '../components/SEO';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import type { CSSProperties } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Placeholder images for categories - the web team will populate these with actual images later.
-// Note: Aim for images that reflect diversity, warmth, and energy. Avoid stock photos wherever possible.
-const galleryData = {
-    'Our Space': [
-        { id: 'space1', url: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=600', alt: 'Training Environment' },
-        { id: 'space2', url: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=600', alt: 'Equipment Layout' },
-        { id: 'space3', url: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=600', alt: 'Private Feel' },
-    ],
-    'In Action': [
-        { id: 'action1', url: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=600', alt: 'Training Session' },
-        { id: 'action2', url: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=600', alt: 'Client Workout' },
-        { id: 'action3', url: 'https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&q=80&w=600', alt: 'Trainer Guiding Client' },
-        { id: 'action4', url: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80&w=600', alt: 'Functional Training' },
-    ],
-    'Our Community': [
-        { id: 'com1', url: 'https://images.unsplash.com/photo-1528720208104-3d9bd03cb874?auto=format&fit=crop&q=80&w=600', alt: 'Group Session' },
-        { id: 'com2', url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=600', alt: 'Community Moment' },
-    ],
-    'Grand Opening': [
-        { id: 'launch1', url: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=600', alt: 'Launch Event' },
-        { id: 'launch2', url: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=600', alt: 'Opening Day Highlights' },
-        { id: 'launch3', url: 'https://images.unsplash.com/photo-1522158637959-30385a09e0da?auto=format&fit=crop&q=80&w=600', alt: 'Celebration' },
-    ]
+// Every image dropped into src/assets/gallery is picked up automatically at build time.
+// No code changes needed to add or remove photos — see the README in that folder.
+const imageModules = import.meta.glob<string>(
+    '../assets/gallery/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp,WEBP,avif,AVIF}',
+    { eager: true, query: '?url', import: 'default' }
+);
+
+// Turn "01_squat-rack.jpg" into "Squat rack" for the alt text.
+const toAlt = (path: string) => {
+    const name = path.split('/').pop()?.replace(/\.[^.]+$/, '') ?? '';
+    const words = name.replace(/^[\d\s_-]+/, '').replace(/[_-]+/g, ' ').trim();
+    if (!words) return 'Thrive Collective, Exeter';
+    return words.charAt(0).toUpperCase() + words.slice(1);
 };
 
-type Category = keyof typeof galleryData;
-const categories: Category[] = ['Our Space', 'In Action', 'Our Community', 'Grand Opening'];
+const photos = Object.keys(imageModules)
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }))
+    .map((path) => ({ path, url: imageModules[path], alt: toAlt(path) }));
+
+const arrowStyle: CSSProperties = {
+    position: 'absolute',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    background: 'rgba(255, 255, 255, 0.1)',
+    border: 'none',
+    borderRadius: '50%',
+    width: '50px',
+    height: '50px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'white',
+    cursor: 'pointer',
+    zIndex: 10000
+};
 
 const GalleryPage = () => {
-    const [activeTab, setActiveTab] = useState<Category>('Our Space');
-    const [selectedImage, setSelectedImage] = useState<{ id: string, url: string, alt: string } | null>(null);
+    const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+    const selected = selectedIndex === null ? null : photos[selectedIndex];
+
+    const close = useCallback(() => setSelectedIndex(null), []);
+    const step = useCallback((delta: number) => {
+        setSelectedIndex((current) => {
+            if (current === null) return current;
+            return (current + delta + photos.length) % photos.length;
+        });
+    }, []);
+
+    useEffect(() => {
+        if (selectedIndex === null) return;
+
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') close();
+            if (e.key === 'ArrowRight') step(1);
+            if (e.key === 'ArrowLeft') step(-1);
+        };
+
+        window.addEventListener('keydown', onKeyDown);
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            window.removeEventListener('keydown', onKeyDown);
+            document.body.style.overflow = previousOverflow;
+        };
+    }, [selectedIndex, close, step]);
 
     return (
         <div style={{ paddingTop: '150px', paddingBottom: '100px', minHeight: '100vh' }}>
@@ -49,121 +85,107 @@ const GalleryPage = () => {
                     <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', color: 'var(--color-white)', textTransform: 'uppercase' }}>
                         Gallery
                     </h1>
-                    <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '0.5rem' }}>
+                    <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
                         Take a look around. Our space is small by design — intimate, private, and built for the kind of training that actually works.
-                    </p>
-                    <p style={{ fontSize: '0.9rem', color: 'var(--color-orange)', fontWeight: 600, opacity: 0.8 }}>
-                        (Please note: These images are for illustrative purposes while we populate our gallery with real shots of our space!)
                     </p>
                 </motion.div>
             </section>
 
-            {/* Gallery Tabs */}
+            {/* Masonry grid — portrait and landscape shots keep their natural shape */}
             <section className="container">
-                {/* Tab Navigation */}
-                <div style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: '1rem',
-                    justifyContent: 'center',
-                    marginBottom: '3rem'
-                }}>
-                    {categories.map((cat) => (
-                        <button
-                            key={cat}
-                            onClick={() => setActiveTab(cat)}
-                            style={{
-                                padding: '0.8rem 1.5rem',
-                                borderRadius: 'var(--radius-full)',
-                                border: 'none',
-                                background: activeTab === cat ? 'var(--color-orange)' : 'rgba(255, 255, 255, 0.05)',
-                                color: activeTab === cat ? '#fff' : 'var(--text-secondary)',
-                                fontWeight: activeTab === cat ? 600 : 400,
-                                cursor: 'pointer',
-                                fontSize: '1rem',
-                                transition: 'all 0.3s ease',
-                            }}
-                        >
-                            {cat}
-                        </button>
-                    ))}
-                </div>
+                {photos.length === 0 ? (
+                    <div style={{
+                        textAlign: 'center',
+                        padding: '4rem 2rem',
+                        background: 'rgba(255, 255, 255, 0.03)',
+                        border: '1px solid rgba(255, 255, 255, 0.05)',
+                        borderRadius: 'var(--radius-lg)',
+                        color: 'var(--text-muted)'
+                    }}>
+                        <p style={{ margin: 0 }}>Our gallery is being photographed right now — check back very soon.</p>
+                    </div>
+                ) : (
+                    <div className="gallery-masonry">
+                        {photos.map((photo, index) => (
+                            <button
+                                key={photo.path}
+                                type="button"
+                                className="gallery-item"
+                                onClick={() => setSelectedIndex(index)}
+                                aria-label={`View photo: ${photo.alt}`}
+                                style={{ animationDelay: `${Math.min(index, 12) * 0.06}s` }}
+                            >
+                                <img
+                                    src={photo.url}
+                                    alt={photo.alt}
+                                    loading={index < 4 ? 'eager' : 'lazy'}
+                                    decoding="async"
+                                />
+                            </button>
+                        ))}
+                    </div>
+                )}
 
-                {/* Image Grid */}
-                <motion.div layout style={{ minHeight: '400px' }}>
-                    <AnimatePresence mode="popLayout">
-                        <motion.div
-                            key={activeTab}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.95 }}
-                            transition={{ duration: 0.4 }}
-                            style={{
-                                display: 'grid',
-                                gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-                                gap: '1.5rem'
-                            }}
-                        >
-                            {galleryData[activeTab].map((item, index) => (
-                                <motion.div
-                                    key={item.id}
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    className="glass-panel"
-                                    style={{
-                                        position: 'relative',
-                                        height: '300px',
-                                        borderRadius: 'var(--radius-md)',
-                                        overflow: 'hidden',
-                                        cursor: 'pointer'
-                                    }}
-                                    onClick={() => setSelectedImage(item)}
-                                >
-                                    <div
-                                        style={{
-                                            position: 'absolute',
-                                            inset: 0,
-                                            backgroundImage: `url('${item.url}')`,
-                                            backgroundSize: 'cover',
-                                            backgroundPosition: 'center',
-                                            transition: 'transform 0.5s ease'
-                                        }}
-                                        className="gallery-image"
-                                    />
-                                    <div style={{
-                                        position: 'absolute',
-                                        bottom: 0, left: 0, right: 0,
-                                        padding: '1.5rem',
-                                        background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%)',
-                                        opacity: 0,
-                                        transition: 'opacity 0.3s ease',
-                                        display: 'flex',
-                                        alignItems: 'flex-end'
-                                    }}
-                                        className="gallery-overlay"
-                                    >
-                                        <p style={{ color: 'var(--color-white)', fontWeight: 500, margin: 0 }}>{item.alt}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </motion.div>
-                    </AnimatePresence>
-                </motion.div>
-
-                {/* CSS for hover effects within motion.div since inline styles can't handle pseudoclasses easily without extra setup */}
                 <style>{`
-                    .gallery-image {
-                        transform: scale(1);
+                    .gallery-masonry {
+                        column-count: 3;
+                        column-gap: 1.5rem;
                     }
-                    .glass-panel:hover .gallery-image {
-                        transform: scale(1.05);
+                    @media (max-width: 992px) {
+                        .gallery-masonry { column-count: 2; }
                     }
-                    .glass-panel:hover .gallery-overlay {
-                        opacity: 1 !important;
+                    @media (max-width: 600px) {
+                        .gallery-masonry { column-count: 1; column-gap: 0; }
+                    }
+                    .gallery-item {
+                        display: block;
+                        width: 100%;
+                        padding: 0;
+                        border: 1px solid rgba(255, 255, 255, 0.06);
+                        border-radius: var(--radius-md);
+                        overflow: hidden;
+                        background: rgba(255, 255, 255, 0.03);
+                        cursor: pointer;
+                        break-inside: avoid;
+                        margin-bottom: 1.5rem;
+                        line-height: 0;
+                        opacity: 0;
+                        animation: galleryFadeIn 0.6s ease forwards;
+                        transition: border-color 0.3s ease, transform 0.4s ease;
+                    }
+                    .gallery-item img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        transition: transform 0.5s ease;
+                    }
+                    @media (hover: hover) {
+                        .gallery-item:hover {
+                            border-color: var(--color-orange);
+                            transform: translateY(-4px);
+                        }
+                        .gallery-item:hover img {
+                            transform: scale(1.04);
+                        }
+                    }
+                    .gallery-item:focus-visible {
+                        outline: 2px solid var(--color-orange);
+                        outline-offset: 3px;
+                    }
+                    @keyframes galleryFadeIn {
+                        from { opacity: 0; transform: translateY(20px); }
+                        to { opacity: 1; transform: translateY(0); }
+                    }
+                    @media (prefers-reduced-motion: reduce) {
+                        .gallery-item {
+                            animation: none;
+                            opacity: 1;
+                            transition: border-color 0.3s ease;
+                        }
+                        .gallery-item:hover,
+                        .gallery-item:hover img { transform: none; }
                     }
                 `}</style>
-
             </section>
 
             {/* Photography Notice */}
@@ -184,7 +206,7 @@ const GalleryPage = () => {
 
             {/* Lightbox Overlay */}
             <AnimatePresence>
-                {selectedImage && (
+                {selected && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -192,16 +214,17 @@ const GalleryPage = () => {
                         style={{
                             position: 'fixed',
                             inset: 0,
-                            background: 'rgba(0, 0, 0, 0.9)',
+                            background: 'rgba(0, 0, 0, 0.92)',
                             zIndex: 9999,
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             padding: '2rem'
                         }}
-                        onClick={() => setSelectedImage(null)}
+                        onClick={close}
                     >
                         <button
+                            aria-label="Close image"
                             style={{
                                 position: 'absolute',
                                 top: '2rem',
@@ -220,21 +243,48 @@ const GalleryPage = () => {
                             }}
                             onClick={(e) => {
                                 e.stopPropagation();
-                                setSelectedImage(null);
+                                close();
                             }}
                         >
                             <X size={24} />
                         </button>
+
+                        {photos.length > 1 && (
+                            <>
+                                <button
+                                    aria-label="Previous photo"
+                                    style={{ ...arrowStyle, left: '1.5rem' }}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        step(-1);
+                                    }}
+                                >
+                                    <ChevronLeft size={26} />
+                                </button>
+                                <button
+                                    aria-label="Next photo"
+                                    style={{ ...arrowStyle, right: '1.5rem' }}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        step(1);
+                                    }}
+                                >
+                                    <ChevronRight size={26} />
+                                </button>
+                            </>
+                        )}
+
                         <motion.img
+                            key={selected.path}
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.9, opacity: 0 }}
                             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-                            src={selectedImage.url}
-                            alt={selectedImage.alt}
+                            src={selected.url}
+                            alt={selected.alt}
                             style={{
                                 maxWidth: '100%',
-                                maxHeight: '90vh',
+                                maxHeight: '85vh',
                                 objectFit: 'contain',
                                 borderRadius: 'var(--radius-sm)'
                             }}
