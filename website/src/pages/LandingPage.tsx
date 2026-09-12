@@ -45,14 +45,14 @@ const LandingPage = () => {
                     style={{
                         position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1,
                         y: isMobile ? 0 : y,
-                        backgroundImage: `url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=2000')`,
+                        backgroundImage: `url('/images/hero.jpeg')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}
                 >
                     <div style={{
                         position: 'absolute', inset: 0,
-                        background: 'rgba(20, 15, 12, 0.85)'
+                        background: 'rgba(20, 15, 12, 0.65)'
                     }} />
                 </motion.div>
 
