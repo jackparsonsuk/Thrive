@@ -21,6 +21,7 @@ const Navbar = () => {
         { name: 'Meet the Team', path: '/meet-the-team' },
         { name: 'About', path: '/about' },
         { name: 'Gallery', path: '/gallery' },
+        { name: "Men's Club", path: '/mens-mental-strength-club' },
         { name: 'Location', path: '/location' },
     ];
 
@@ -45,8 +46,8 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }} className="desktop-menu-wrapper">
-                    <div style={{ display: 'flex', gap: '2.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }} className="desktop-menu-wrapper">
+                    <div style={{ display: 'flex', gap: '2rem' }}>
                         {links.map((link) => {
                             const isActive = location.pathname === link.path;
                             return (
@@ -59,6 +60,7 @@ const Navbar = () => {
                                         fontSize: '0.95rem',
                                         letterSpacing: '0.05em',
                                         textTransform: 'uppercase',
+                                        whiteSpace: 'nowrap',
                                         position: 'relative',
                                         textDecoration: 'none',
                                         transition: 'color var(--transition-fast)'
@@ -75,7 +77,7 @@ const Navbar = () => {
                             );
                         })}
                     </div>
-                    <Link to="/booking" className="btn-primary" style={{ padding: '0.8rem 1.8rem', fontSize: '0.9rem' }}>
+                    <Link to="/booking" className="btn-primary" style={{ padding: '0.8rem 1.8rem', fontSize: '0.9rem', whiteSpace: 'nowrap' }}>
                         Book Session
                     </Link>
                 </div>
@@ -91,7 +93,7 @@ const Navbar = () => {
 
             {/* Basic Mobile Menu styling for now */}
             <style>{`
-        @media (max-width: 768px) {
+        @media (max-width: 1320px) {
           .desktop-menu-wrapper { display: none !important; }
           .mobile-menu-btn { display: block !important; }
         }

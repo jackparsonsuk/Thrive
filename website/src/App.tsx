@@ -12,6 +12,7 @@ import LocationPage from './pages/LocationPage';
 import ContactPage from './pages/ContactPage';
 import GalleryPage from './pages/GalleryPage';
 import BookingPage from './pages/BookingPage';
+import MentalStrengthClubPage from './pages/MentalStrengthClubPage';
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="/gallery" element={<GalleryPage />} />
                         <Route path="/booking" element={<BookingPage />} />
+                        <Route path="/mens-mental-strength-club" element={<MentalStrengthClubPage />} />
                     </Routes>
                 </main>
                 <Footer />

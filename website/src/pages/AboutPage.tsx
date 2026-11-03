@@ -1,5 +1,6 @@
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import AccordionSection from '../components/AccordionSection';
 
 const AboutPage = () => {
@@ -58,7 +59,7 @@ const AboutPage = () => {
                             We want Thrive Collective to be genuinely embedded in the Exeter community. That means community-led sessions, partnerships with local organisations, and would love to work with the NHS on referral pathways for clients who could benefit from health and fitness support.
                         </p>
                         <p style={{ marginBottom: '1.5rem' }}>
-                            We're already working towards pre-natal support classes and sessions, post-natal sessions to help new parents regain their strength and confidence, and specialist, adaptive programmes for older adults, people with long-term health conditions, and young athletes. Beyond this, we have a range of small classes – a men's Mental Strength Group, ladies only group, a female-only Power-up Powerlifting group (and a male group if there is interest!) and a Saturday Running group.
+                            We're already working towards pre-natal support classes and sessions, post-natal sessions to help new parents regain their strength and confidence, and specialist, adaptive programmes for older adults, people with long-term health conditions, and young athletes. Beyond this, we have a range of small classes – a <Link to="/mens-mental-strength-club" style={{ color: 'var(--color-orange)' }}>Men's Mental Strength Club</Link>, ladies only group, a female-only Power-up Powerlifting group (and a male group if there is interest!) and a Saturday Running group.
                         </p>
                         <p>
                             This is just the beginning. Thrive Collective wants to grow to benefit the community, so let us know what you need, and we can see how we can help.
