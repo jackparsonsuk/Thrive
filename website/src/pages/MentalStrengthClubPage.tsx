@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import PhotoGallery from '../components/PhotoGallery';
 import { photosFromGlob } from '../utils/photos';
+import { mentalStrengthClubSeo as seo } from '../seo/mentalStrengthClub';
+
+const siteUrl = 'https://www.thrivecollectiveexeter.co.uk';
 
 // Drop more walk photos into src/assets/mental-strength-club; the filename becomes the alt text.
 const photos = photosFromGlob(import.meta.glob<string>(
@@ -27,13 +30,41 @@ const MentalStrengthClubPage = () => {
     const today = new Date().toISOString().slice(0, 10);
     const upcoming = walkDates.filter((date) => date >= today);
 
+    // Lets search engines show upcoming walks as events.
+    const jsonLd = upcoming.length > 0 ? {
+        '@context': 'https://schema.org',
+        '@graph': upcoming.map((date) => ({
+            '@type': 'Event',
+            name: "Men's Mental Strength Club Walk",
+            description: "A free, relaxed Sunday walk for men in and around Exeter. Walk, talk and connect, with an optional coffee or beer at the end.",
+            startDate: date,
+            eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+            eventStatus: 'https://schema.org/EventScheduled',
+            isAccessibleForFree: true,
+            image: `${siteUrl}${seo.image}`,
+            url: `${siteUrl}${seo.path}`,
+            location: {
+                '@type': 'Place',
+                name: 'Exeter',
+                address: { '@type': 'PostalAddress', addressLocality: 'Exeter', addressRegion: 'Devon', addressCountry: 'GB' }
+            },
+            offers: { '@type': 'Offer', price: 0, priceCurrency: 'GBP', availability: 'https://schema.org/InStock', url: `${siteUrl}${seo.path}` },
+            organizer: { '@type': 'Organization', name: 'Thrive Collective', url: siteUrl }
+        }))
+    } : undefined;
+
     return (
         <div style={{ background: 'var(--color-charcoal-darkest)' }}>
             <SEO
-                title="Men's Mental Strength Club"
-                description="Free Sunday walks in Exeter for men to walk, talk and connect. Raising awareness of men's mental health with Thrive Collective."
-                canonicalUrl="/mens-mental-strength-club"
-                keywords="Men's Mental Strength Club, men's mental health, walking group, Exeter, Thrive Collective"
+                title={seo.title}
+                description={seo.description}
+                canonicalUrl={seo.path}
+                keywords={seo.keywords}
+                image={seo.image}
+                imageAlt={seo.imageAlt}
+                imageWidth={seo.imageWidth}
+                imageHeight={seo.imageHeight}
+                jsonLd={jsonLd}
             />
 
             {/* Header */}
@@ -41,6 +72,11 @@ const MentalStrengthClubPage = () => {
                 <div style={{ position: 'relative' }}>
                     <img
                         src="/images/mental-strength-club/group-walk.webp"
+                        srcSet="/images/mental-strength-club/group-walk-1000.webp 1000w, /images/mental-strength-club/group-walk.webp 2000w"
+                        sizes="100vw"
+                        width={2000}
+                        height={1119}
+                        fetchPriority="high"
                         alt="Members of the Men's Mental Strength Club gathered before a Sunday walk"
                         style={{ display: 'block', width: '100%', height: 'clamp(300px, 60vw, 760px)', maxHeight: '75vh', objectFit: 'cover', objectPosition: 'center 45%' }}
                     />
@@ -167,7 +203,7 @@ const MentalStrengthClubPage = () => {
                     <div style={{ flex: '1 1 300px' }}>
                         <span style={{ color: 'var(--color-orange)', textTransform: 'uppercase', letterSpacing: '0.2em', fontWeight: 700, fontSize: '0.85rem' }}>Organised by Mark</span>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.7, marginTop: '0.75rem', marginBottom: '1.5rem' }}>
-                            Mark is one of our personal trainers and a passionate advocate for the link between physical and mental health. He set up the club and plans every walk.
+                            Mark is one of our co-founders and personal trainers, and a passionate advocate for the link between physical and mental health. He set up the club and plans every walk.
                         </p>
                         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                             <a href="https://www.instagram.com/thrivecollectiveexeter" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block' }}>
