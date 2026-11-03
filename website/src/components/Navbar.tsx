@@ -38,7 +38,7 @@ const Navbar = () => {
                 transition: 'all 0.4s ease'
             }}
         >
-            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '3rem' }}>
                 <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 800, fontSize: '1.5rem', letterSpacing: '-0.5px', textDecoration: 'none' }}>
                     <img src="/logos/TC_Monogram_White.png" alt="Thrive Collective Icon" style={{ height: '32px', width: 'auto' }} />
                     <span style={{ color: 'var(--color-orange)' }}>THRIVE</span>
@@ -93,7 +93,7 @@ const Navbar = () => {
 
             {/* Basic Mobile Menu styling for now */}
             <style>{`
-        @media (max-width: 1320px) {
+        @media (max-width: 1400px) {
           .desktop-menu-wrapper { display: none !important; }
           .mobile-menu-btn { display: block !important; }
         }
